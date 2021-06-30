@@ -2,7 +2,7 @@
 #include <vector>
 #include "os.hh"
 #include "converter.hh"
-
+#include "gerber.hh"
 
 int main(int argc, char** argv){
     std::string inpath = argv[1];
@@ -12,8 +12,13 @@ int main(int argc, char** argv){
     std::vector<std::string> files = os::getFilesInDirectory(inpath);
 
     for(auto file : files){
-        converter::gerber2stl(file, outdir);
+        std::cout << "FILENAME: "<< file << std::endl;
+        GerberFile *gf = new GerberFile(file, outdir);
+
+
+        free(gf);
     }
+
 
     return 0;
 }

@@ -1,9 +1,13 @@
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "gerber.hh"
 
 class converter{
     
 public:
-    static bool gerber2stl(std::string inpath, std::string outdir);
+    GerberFile* gerberFile;
+
+    bool gerber2stl(std::string inpath, std::string outdir, GerberFile* gf);
 };
