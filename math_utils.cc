@@ -37,7 +37,33 @@ Shape MathUtils::GenerateRectangle(float width, float height){
 }
 
 Shape MathUtils::GenerateObround(float width, float height){
+
+    std::vector<Shape> shapes;
+
+    Shape rect = GenerateRectangle(width-height, height);
+    Shape lcircle = GenerateCircle(height/2).setCenter(-1*(width-height)/2, 0);
+    Shape rcircle = GenerateCircle(height/2).setCenter((width-height)/2, 0);
+
+    shapes.push_back(lcircle);
+    shapes.push_back(rect);
+    shapes.push_back(rcircle);
+
+    //merge points together
+    //TODO: ADD CONVEX HULL METHOD
+    Shape ret = MergeShapes(shapes).convexHull();
+}
+
+Shape MathUtils::MergeShapes(std::vector<Shape> shapes){
+
+    std::vector<Point> points;
     
+    for(Shape s : shapes){
+        for(Point p : s.points){
+            points.push_back(p);
+        }
+    }
+
+    return Shape(points);
 }
 
 Point::Point(float x, float y){
@@ -57,5 +83,3 @@ Line::Line(float x1, float y1, float x2, float y2){
 Shape::Shape(std::vector<Point> points){
     this->points = points;
 }
-
-

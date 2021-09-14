@@ -23,4 +23,4 @@ clean:
 	rm *.o gerber2stl
 
 test:
-	mkdir ./test_files/out/ && ./gerber2stl ./test_files/test/ ./test_files/out/
+	./gerber2stl ./test_files/test/ ./test_files/out/

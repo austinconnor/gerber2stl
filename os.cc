@@ -1,9 +1,9 @@
 #include "os.hh"
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <experimental/filesystem>
+#include <filesystem>
 
-namespace fs = std::experimental::filesystem;
+namespace fs = std::filesystem;
 
 //SUMMARY
 //args: path (filepath to check)

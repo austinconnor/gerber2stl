@@ -29,6 +29,7 @@ public:
     std::vector<Line> lines;
 
     Shape(std::vector<Point> points);
+    Shape setCenter(float x, float y);
 
 };
 
@@ -43,6 +44,7 @@ public:
     static Shape GenerateCircle(float radius);
     static Shape GenerateRectangle(float width, float height);
     static Shape GenerateObround(float width, float height);
+    static Shape MergeShapes(std::vector<Shape> shapes);
 
 };
 

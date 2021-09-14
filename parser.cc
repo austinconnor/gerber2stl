@@ -176,7 +176,7 @@ void parser::parseCoordFormat(std::string line){
 void parser::parseOperationType(std::string line, GerberInstruction* instruction){
 
     
-    switch(line[2]- '0'){
+    switch(line[2] - '0'){
         case 1:
             instruction->operation_type = GerberUtils::DRAW;
             break;

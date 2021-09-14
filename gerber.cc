@@ -11,7 +11,7 @@ GerberFile::GerberFile(std::string filepath, std::string outdir){
 
 void GerberInstruction::print(bool debug){
 
-    if(!debug){
+    if(debug){
         //std::cout << this->operation_type << std::endl;
         if(this->hasCoords){
             std::cout << "--------" << std::endl;
