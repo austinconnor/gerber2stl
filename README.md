@@ -3,7 +3,7 @@
 The purpose of this project is to convert Gerber files for PCB etching to STL files to be used for 3D printing. <br>
 This can be used for PCB prototyping, or to print live circuits. <br>
 ---
-### Usage
+## Usage
 To clone, build, and run the program, run the following commands:
 ```
 git clone https://github.com/austinconnor/gerber2stl.git
@@ -23,5 +23,5 @@ gerber2stl <input_directory> <output_directory>
 The input directory should contain Gerber files, and for each Gerber file, an STL file will be generated and sent to the output directory.
 
 ---
-### Requirements
+## Requirements
 For CMake, be sure to use the Generator of your choice. I use `MSYS Makefiles` in my `.bat` files. <br>
