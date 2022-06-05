@@ -25,3 +25,4 @@ The input directory should contain Gerber files, and for each Gerber file, an ST
 ---
 ## Requirements
 For CMake, be sure to use the Generator of your choice. I use `MSYS Makefiles` in my `.bat` files. <br>
+The project was developed in windows, but should easily run on Linux with necessary build tweaks and/or run commands.
