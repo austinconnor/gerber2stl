@@ -31,3 +31,8 @@
 *.out
 *.app
 
+# Directories
+/build
+/CMakeFiles
+/.vscode
+/.git
