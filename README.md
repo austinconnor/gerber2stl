@@ -1,4 +1,4 @@
-# Gerber to STL File Converter
+# Gerber to STL File Converter <br>
 The purpose of this project is to convert Gerber files for PCB etching to STL files to be used for 3D printing. <br>
 This can be used for PCB prototyping, or to print live circuits. <br>
 ---
